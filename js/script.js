@@ -4,11 +4,10 @@ const loadFoodData = (search) =>{
     .then(res => res.json())
     .then(data => displayFood(data.meals))
 }
-const displayFood = meals => {
+const displayFood = food => {
     const mealContainer = document.getElementById('food-container');
     mealContainer.innerHTML = ``;
-    meals.forEach(element => {
-        console.log(element)
+    food.forEach(element => {
         const mealDiv = document.createElement('div');
         mealDiv.classList.add('col');
         // adding food dynamicaly
